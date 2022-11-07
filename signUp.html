@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JMBAMA</title>
+    <link rel="shortcut icon" href="assets/trial1.png" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/signUp.css" />
+  </head>
+  <body>
+    <div class="load"></div>
+    <div class="container">
+      <div class="text">
+        <div class="info">
+          <h2>J M BAMA DISPATCH SERVICE LLC</h2>
+          <p>Quality Service Is Our Priority</p>
+        </div>
+        <a href="index.html#contact">Contact Us</a>
+      </div>
+      <div class="form">
+        <h2>Sign Up Today</h2>
+        <form action="#">
+          <input
+            type="text"
+            name="fName"
+            id="fName"
+            placeholder="First Name*"
+          />
+          <input type="text" name="lName" id="lName" placeholder="Last Name*" />
+          <input type="email" name="email" id="email" placeholder="Email*" />
+          <input
+            type="number"
+            name="phone"
+            id="phone"
+            placeholder="Phone Number*"
+          />
+          <select name="" id="">
+            <option value="Carrier Type*" disabled selected>
+              Carrier Type
+            </option>
+            <option value="Owner Operator">Owner Operator</option>
+            <option value="Company Driver">Company Driver</option>
+            <option value="Tracking Company">Tracking Company</option>
+          </select>
+          <label for="question"
+            >Do you currently have a 53' Dry van or Reefer?*</label
+          >
+          <select name="question" id="question" required>
+            <option value="select" disabled selected>Please Select</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="obtaining">Obtaining Trailer</option>
+          </select>
+          <label for="authority">MC Authority*</label>
+          <select name="authority" id="authority" required>
+            <option value="select" disabled selected>Please Select</option>
+            <option value="yes">I have an MC and want to get dispatched</option>
+            <option value="no">I don't have an MC but am getting one</option>
+            <option value="obtaining">
+              I don't have an MC and want to lease under someone
+            </option>
+          </select>
+          <!-- <input type="checkbox" name="terms" id="terms" />
+          <label for="terms"
+            >I have read and agreed to Smarthop's
+            <a href="#">Terms of Service</a>,<a href="#">SMS Terms</a>,<a
+              href="#"
+              >Privacy Policy</a
+            >, & <a href="#">Terms of Insurance</a>*</label
+          > -->
+          <input type="submit" class="button" value="GET STARTED FOR FREE" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

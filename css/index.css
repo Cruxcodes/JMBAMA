@@ -1,0 +1,594 @@
+/* Mostlu used colors */
+:root {
+  --orangeColor: #f1401e;
+  --blueColor: #2e348a;
+}
+html { 
+  scroll-behavior: smooth; 
+}
+body {
+  margin: 0%;
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+}
+/* Customizing the scrollbar */
+::-webkit-scrollbar {
+  background: var(--blueColor);
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--orangeColor);
+  border-radius: 10px;
+}
+
+.load {
+  background: var(--blueColor);
+  position: fixed;
+  z-index: 2000;
+  top: 0%;
+  left: 0px;
+  width: 0%;
+  height: 100%;
+  animation: load 2s ease-out 1;
+  clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+}
+@keyframes load {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+/* For Navigation */
+.bg-light {
+  background: var(--blueColor) !important;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+.navbar-nav {
+  width: 100%;
+  justify-content: end;
+}
+nav img {
+  width: 50%;
+  margin-left: 20px;
+}
+
+/* This is for the top content */
+.top {
+  padding: 60px 30px 80px;
+  background: url(../assets/dark-background-truck.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.top .content {
+  display: flex;
+  max-width: 1000px;
+  height: 100%;
+  margin: 20px auto;
+  position: relative;
+  animation: loaded 1.4s ease-in 0.5s 1;
+}
+.top .left {
+  width: 55%;
+  padding-right: 2px;
+  margin-right: 10px;
+}
+.top .left .text {
+  width: 100%;
+  color: white;
+  right: 0%;
+}
+.left .text h1 {
+  font-size: 3em;
+}
+.left .text img {
+  margin: 20px 0px;
+}
+.top .right {
+  width: 40%;
+  background: #003764;
+  margin: 20px 0px;
+}
+@keyframes loaded {
+  0% {
+    opacity: 0;
+    top: 40px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top {
+    width: 100%;
+    padding: 20px 0px;
+  }
+  .content {
+    width: 90%;
+    flex-direction: column;
+    margin: auto;
+  }
+  .content .left {
+    width: 100%;
+  }
+  .content .right {
+    width: 100%;
+  }
+}
+/* End of the top content */
+
+/* This is for about us section */
+.aboutUs {
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  width: 100%;
+}
+.aboutContent {
+  display: flex;
+  max-width: 1000px;
+  padding: 10px 30px;
+  margin: 0px auto 30px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 1.2em;
+  justify-content: space-between;
+}
+.aboutContent .about {
+  line-height: 1.7em;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about span {
+  color: var(--orangeColor);
+  font-weight: bold;
+}
+.aboutContent .about h2 {
+  font-weight: 500;
+  font-size: 3em;
+  color: var(-- );
+  width: fit-content;
+  border-bottom: 2px solid var(--orangeColor);
+  padding-bottom: 15px;
+}
+.concept {
+  width: 50%;
+}
+.concept img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+@media (max-width: 768px) {
+  .aboutContent {
+    flex-direction: column;
+  }
+  .aboutContent > div {
+    width: 100%;
+  }
+  .aboutContent .about {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+/* End of the about us section */
+
+/* This is for the links get started */
+.button {
+  font-weight: 500;
+  text-decoration: none;
+  background-color: rgba(232, 104, 61, 1);
+  border: 2px solid #e8683d;
+  border-radius: 0px;
+  color: #fff;
+  padding: 12px 44px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  position: relative;
+  top: 3%;
+  display: block;
+  margin-top: 20px;
+}
+.button:hover {
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 1);
+  border: 2px solid #e8683d;
+  color: #e8683d;
+  box-shadow: 2px 2px 20px gray;
+}
+/* End of get started button */
+
+/* The testimonial section */
+.testimonial {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 30px;
+  box-sizing: border-box;
+}
+.testimonial h2{
+  font-weight: 500;
+  font-size: 3em;
+  color: var(--orangeColor);
+  width: fit-content;
+  border-bottom: 2px solid var(--blueColor);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+.testimonialTexts{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+.testimonialTexts .text{
+  width: 30%;
+  background: #2e348a;
+  font-style: italic;
+  border-radius: 20px;
+  color: white;
+  padding: 20px 0px 10px 10px;
+  box-shadow: 1px 1px 20px rgb(116, 116, 116);
+}
+.text b {
+  color: rgb(143, 153, 165);
+  font-size: 1.3em;
+  font-style: italic;
+}
+.text p {
+  /* line-height: 1.4em; */
+  font-weight: normal;
+  padding: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .testimonialTexts {
+    flex-direction: column;
+    width: 100%;
+  }
+  .testimonial .text{
+    width: 90%;
+    font-size: 1.2em;
+    margin: 20px auto;
+  }
+
+}
+/* End of testimonial section */
+
+/* For the services */
+.services {
+  background: #ebebeb;
+  width: 100%;
+  padding: 30px 0px;
+  box-sizing: border-box;
+}
+.services .content {
+  text-align: center;
+  margin: auto;
+  max-width: 1000px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.services .content > h2 {
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 3em;
+  color: var(--blueColor);
+  width: fit-content;
+  border-bottom: 2px solid var(--orangeColor);
+  padding-bottom: 15px;
+}
+.specialize {
+  margin: 40px 0px 0px;
+  line-height: 20px;
+}
+.specialize span {
+  color: #e8683d;
+  font-weight: bold;
+}
+.whatText {
+  margin: 60px 0px 30px;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+.services .content p {
+  text-align: left;
+  font-size: 1.1em;
+  width: 80%;
+}
+.services .content b {
+  color: #e8683d;
+}
+.cards {
+  display: flex;
+  padding: 30px 0px;
+  justify-content: space-between;
+  margin: auto;
+}
+.cards > div {
+  padding: 30px 20px;
+  box-sizing: border-box;
+  background: #ebebeb;
+  background-image: linear-gradient(
+    36deg,
+    #ebebeb 33%,
+    rgba(46, 52, 138, 1) 79%
+  );
+  background-size: 500%;
+  border-radius: 10px;
+  background-position: 0% 0%;
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  line-height: 24px;
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  transition: 0.8s;
+  width: 30%;
+}
+.cards .icon {
+  flex: 2;
+  font-size: 3rem;
+}
+.cards > div:hover {
+  transform: scale(1.04);
+  box-shadow: 2px 2px 20px rgb(100, 100, 100);
+  background-position: 100% 100%;
+  color: white;
+}
+.cards > div h2 {
+  font-weight: 100;
+  flex: 1;
+}
+.services .content a {
+  margin: auto;
+  width: fit-content;
+  text-decoration: none;
+  position: relative;
+  transition: 0.5s;
+}
+.services .content a:nth-child(1):after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 10%;
+  background: white;
+  left: 0px;
+  bottom: -5px;
+  transition: 0.5s;
+}
+.services .content a:hover::after {
+  font-weight: 500;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .services {
+    width: 100%;
+  }
+  .cards {
+    flex-direction: column;
+    width: 100%;
+    padding: 0px;
+  }
+  .services .content {
+    width: 100%;
+  }
+  .services .content a {
+    width: 80%;
+    padding: 10px 0px;
+  }
+
+  .cards > div {
+    width: 90%;
+    padding: 20px 10px;
+    display: block;
+    margin: 20px auto;
+  }
+}
+
+/* For carrier requirements */
+.requirements {
+  max-width: 1000px;
+  margin: auto;
+  justify-content: space-between;
+  padding: 60px 30px;
+  box-sizing: border-box;
+}
+
+.requirements h2 {
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 2.5em;
+  color: var(--orangeColor);
+  width: fit-content;
+  border-bottom: 2px solid var(--blueColor);
+  padding-bottom: 15px;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.required {
+  display: grid;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 70px;
+  padding: 10px;
+  grid-template-columns: 23% 23% 23% 23%;
+}
+
+.required > div {
+  width: 100%;
+  font-size: 1.8em;
+  font-weight: 500;
+  flex-direction: column;
+  padding: 20px 10px 10px ;
+  box-sizing: border-box;
+  color: white;
+  height: 200px;
+  background: var(--blueColor);
+  box-shadow: 1px 1px 1px black;
+  border-radius: 10px;
+  justify-content: space-around;
+  text-align: center;
+  transition: 0.5s;
+  margin-top: 10px;
+}
+
+.required > div svg {
+  height: 40%;
+  font-weight: lighter;
+}
+
+.required p {
+  height: 30%;
+  margin: 0px;
+}
+
+.required > div:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 1px 20px black;
+}
+/* For responsiveness */
+@media (max-width: 768px) {
+  .required {
+    grid-template-columns: 48% 48%;
+  }
+}
+@media (max-width: 370px) {
+  .required {
+    grid-template-columns: 97%;
+  }
+}
+/* End of carrier section */
+
+/* This is for conact us */
+.contactUs {
+  background: url(../assets/truk.jpg); 
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  padding: 30px 0px;
+  box-sizing: border-box;
+}
+.contactUs .info {
+  text-align: center;
+  margin: 30px auto;
+  max-width: 1000px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.info h2 {
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 2.5em;
+  color: var(--blueColor);
+  width: fit-content;
+  border-bottom: 2px solid var(--orangeColor);
+  padding-bottom: 15px;
+  text-align: center;
+}
+.contactCards {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+.contactCards > div {
+  width: 30%;
+  padding: 30px 30px 20px;
+  box-sizing: border-box;
+  background: rgb(172, 51, 51);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ebebeb;
+  background-image: linear-gradient(
+    -36deg,
+    #ebebeb 33%,
+    rgba(46, 52, 138, 1) 79%
+  );
+  background-size: 500%;
+  border-radius: 10px;
+  background-position: 100% 100%;
+  transition: 0.8s;
+  color: var(--orangeColor);
+  box-shadow: 1px 1px 20px gray;
+}
+.contactCards > div .icon {
+  height: 60%;
+}
+.contactCards > div:hover {
+  color: white;
+  background-position: 0% 0%;
+}
+.contactCards > div svg {
+  font-size: 5em;
+}
+.contactCards > div .detail {
+  word-break: break-all;
+  height: fit-content;
+}
+.detail a {
+  margin: 20px auto 0px;
+  box-sizing: border-box;
+  width: 93%;
+  display: block;
+  color: var(--orangeColor);
+  text-decoration-color: rgb(0, 0, 0);
+  font-size: 1.2em;
+}
+.contactCards > div:hover a {
+  color: white;
+}
+@media (max-width: 768px) {
+  .contactCards {
+    flex-direction: column;
+  }
+  .contactCards > div {
+    width: 90%;
+    padding: 20px 10px;
+    display: block;
+    margin: 20px auto;
+  }
+}
+/* End of contact section */
+
+/* This is for the trial section */
+.trail {
+  padding: 80px 30px;
+  text-align: center;
+  box-sizing: border-box;
+  color: white;
+  background: url(../assets/landing-page-background-1.png) no-repeat;
+  background-position: 0px 255px;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.trail h2 {
+  font-size: 2em;
+  font-weight: 400;
+}
+/* End of trial section */
+
+/* This is the footer */
+footer {
+  padding: 40px 20px;
+  background: #003764;
+  color: white;
+  font-size: 1.3em;
+  text-align: center;
+  box-sizing: border-box;
+}
+/* End of footer section */
